@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using MockingDataDemo.Models;
 using MockingDataDemo.Services;
 
 namespace MockingDataDemo.Tests;
@@ -38,8 +37,7 @@ public class Manual_StudentServiceTests
     public void GetStudents_ShouldReturnAllAddedStudents()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
-        foreach (var student in students)
+        foreach (var student in MockData.Students)
         {
             _service.AddStudent(student);
         }
@@ -48,15 +46,14 @@ public class Manual_StudentServiceTests
         var result = _service.GetStudents();
 
         // Assert
-        result.Should().BeEquivalentTo(students);
+        result.Should().BeEquivalentTo(MockData.Students);
     }
 
     [Fact]
     public void GetStudentById_ShouldReturnCorrectStudent()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
-        foreach (var student in students)
+        foreach (var student in MockData.Students)
         {
             _service.AddStudent(student);
         }
@@ -72,8 +69,7 @@ public class Manual_StudentServiceTests
     public void GetStudentById_ShouldReturnNullForInvalidId()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
-        foreach (var student in students)
+        foreach (var student in MockData.Students)
         {
             _service.AddStudent(student);
         }
@@ -89,8 +85,7 @@ public class Manual_StudentServiceTests
     public void GetStudentCount_ShouldReturnCorrectCount()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
-        foreach (var student in students)
+        foreach (var student in MockData.Students)
         {
             _service.AddStudent(student);
         }
