@@ -24,7 +24,7 @@ public class Manual_StudentServiceTests
     public void DeleteStudent_ShouldRemoveStudentFromList()
     {
         // Arrange
-        var student = MockData.JaneSmith;
+        var student = MockData.MickeyMouse;
         _service.AddStudent(student);
 
         // Act
@@ -38,7 +38,7 @@ public class Manual_StudentServiceTests
     public void GetStudents_ShouldReturnAllAddedStudents()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.JaneSmith, MockData.BobJohnson };
+        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
         foreach (var student in students)
         {
             _service.AddStudent(student);
@@ -55,24 +55,24 @@ public class Manual_StudentServiceTests
     public void GetStudentById_ShouldReturnCorrectStudent()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.JaneSmith, MockData.BobJohnson };
+        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
         foreach (var student in students)
         {
             _service.AddStudent(student);
         }
 
         // Act
-        var result = _service.GetStudentById(MockData.JaneSmith.Id);
+        var result = _service.GetStudentById(MockData.MickeyMouse.Id);
 
         // Assert
-        result.Should().BeEquivalentTo(MockData.JaneSmith);
+        result.Should().BeEquivalentTo(MockData.MickeyMouse);
     }
 
     [Fact]
     public void GetStudentById_ShouldReturnNullForInvalidId()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.JaneSmith, MockData.BobJohnson };
+        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
         foreach (var student in students)
         {
             _service.AddStudent(student);
@@ -89,7 +89,7 @@ public class Manual_StudentServiceTests
     public void GetStudentCount_ShouldReturnCorrectCount()
     {
         // Arrange
-        var students = new List<Student> { MockData.JohnDoe, MockData.JaneSmith, MockData.BobJohnson };
+        var students = new List<Student> { MockData.JohnDoe, MockData.MickeyMouse, MockData.TestUser };
         foreach (var student in students)
         {
             _service.AddStudent(student);

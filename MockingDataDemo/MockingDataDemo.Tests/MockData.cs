@@ -6,8 +6,8 @@ public static class MockData
     public static List<Student> Students = new()
     {
         JohnDoe!,
-        JaneSmith!,
-        BobJohnson!,
+        MickeyMouse!,
+        TestUser!,
     };
 
     public static Student JohnDoe = new()
@@ -17,26 +17,26 @@ public static class MockData
         LastName = "Doe",
         Address = "123 Main St",
         DateOfBirth = new DateTime(1995, 1, 1),
-        Email = "johndoe@example.com"
+        Email = "johndoe@mail.com"
     };
 
-    public static Student JaneSmith = new()
+    public static Student MickeyMouse = new()
     {
         Id = Guid.NewGuid(),
-        FirstName = "Jane",
-        LastName = "Smith",
-        Address = "456 Park Ave",
+        FirstName = "Mickey",
+        LastName = "Mouse",
+        Address = "456 Mickey Street",
         DateOfBirth = new DateTime(1997, 2, 2),
-        Email = "janesmith@example.com"
+        Email = "mickey@example.com"
     };
 
-    public static Student BobJohnson = new()
+    public static Student TestUser = new()
     {
         Id = Guid.NewGuid(),
-        FirstName = "Bob",
-        LastName = "Johnson",
-        Address = "789 Elm St",
+        FirstName = "Test",
+        LastName = "User",
+        Address = "789 Test St",
         DateOfBirth = new DateTime(1990, 3, 3),
-        Email = "bobjohnson@example.com"
+        Email = "testuser@gmail.com"
     };
 }
