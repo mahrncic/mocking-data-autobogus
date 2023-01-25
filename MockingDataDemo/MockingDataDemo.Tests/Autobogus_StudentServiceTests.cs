@@ -5,10 +5,10 @@ using MockingDataDemo.Services;
 
 namespace MockingDataDemo.Tests;
 
-public class StudentServiceTests
+public class Autobogus_StudentServiceTests
 {
-    private readonly StudentService _service = new StudentService();
-    private readonly AutoFaker<Student> _faker = new AutoFaker<Student>();
+    private readonly StudentService _service = new();
+    private readonly AutoFaker<Student> _faker = new();
 
     [Fact]
     public void AddStudent_ShouldAddStudentToList()
