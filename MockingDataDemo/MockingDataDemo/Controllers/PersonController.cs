@@ -7,14 +7,11 @@ namespace MockingDataDemo.Controllers;
 [Route("[controller]")]
 public class PersonController : ControllerBase
 {
-    private readonly ILogger<PersonController> _logger;
     private readonly PersonService _personService;
 
     public PersonController(
-        ILogger<PersonController> logger,
         PersonService personService)
     {
-        _logger = logger;
         _personService = personService;
     }
 
