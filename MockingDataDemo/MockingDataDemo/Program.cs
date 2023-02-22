@@ -2,7 +2,7 @@ using MockingDataDemo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<StudentService>();
+builder.Services.AddSingleton<PersonService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

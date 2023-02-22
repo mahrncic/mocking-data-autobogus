@@ -3,11 +3,11 @@
 namespace MockingDataDemo.Tests;
 public static class MockData
 {
-    public static List<Student> Students 
+    public static List<Person> Persons 
     {
         get
         {
-            return new List<Student>()
+            return new List<Person>()
             {
                 JohnDoe,
                 MickeyMouse,
@@ -16,7 +16,7 @@ public static class MockData
         }
     }
 
-    public static Student JohnDoe = new()
+    public static Person JohnDoe = new()
     {
         Id = Guid.NewGuid(),
         FirstName = "John",
@@ -26,7 +26,7 @@ public static class MockData
         Email = "johndoe@mail.com",
     };
 
-    public static Student MickeyMouse = new()
+    public static Person MickeyMouse = new()
     {
         Id = Guid.NewGuid(),
         FirstName = "Mickey",
@@ -36,7 +36,7 @@ public static class MockData
         Email = "mickey@example.com",
     };
 
-    public static Student TestUser = new()
+    public static Person TestUser = new()
     {
         Id = Guid.NewGuid(),
         FirstName = "Test",

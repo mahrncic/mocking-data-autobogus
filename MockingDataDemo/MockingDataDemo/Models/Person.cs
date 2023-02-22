@@ -1,6 +1,6 @@
 ﻿namespace MockingDataDemo.Models;
 
-public record Student
+public record Person
 {
     public Guid Id { get; set; }
     public string FirstName { get; set; } = default!;
